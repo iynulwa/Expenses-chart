@@ -4,10 +4,10 @@ import Header from './components/header'
 function App() {
 
   return (
-    <div className='container'>
+    <main className='flex'>
       <Header />
       <Barchart />
-    </div>
+    </main>
     
   )
 }
