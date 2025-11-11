@@ -1,0 +1,116 @@
+:root{
+    --clr-red-500: #{primary-red-colour};
+    --clr-blue-300: #{primary-blue-colour};
+    --clr-brown-950: #{primary-brown-colour};
+    --clr-brown-400: #{secondary-brown-colour};
+    --clr-red-100: #{secondary-red-colour};
+    --fs-body: #{font-body};
+    --fw-normal: #{font-weight-normal};
+    --fw-bold: #{font-weight-bold};
+    --ff-body: #{font-stack};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+	font-synthesis: none;
+    text-rendering: optimizeLegibility;
+}
+
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+    margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body) system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+h1, h2,
+h3, h4 {
+    text-wrap: balance;
+}
+
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input, button,
+textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+:target {
+    scroll-margin-block: 5ex;
+}
+
+// remove animation for people who've turned them off 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::after,
+  *::before {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+// Utility class
+
+//General 
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+
+// App.jsx style
+main {
+    flex-direction: column;
+    width: 100%;
+    max-width: 40rem;
+    gap: 2rem;
+}
