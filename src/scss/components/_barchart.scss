@@ -1,5 +1,47 @@
-hr {
-    width: 100%;
-    height: 1px;
-    background-color: black;
+.barchart {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+
+    h1 {
+        font-size: 1.5rem;
+        font-weight: var(--fw-bold);
+        margin-block-end: 1rem;
+    }
+
+    hr {
+        width: 100%;
+        height: 2px;
+        background-color: var(--clr-red-100);
+        margin: 1rem 0;
+    }
+}
+
+.stats {
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.stats-one-container{
+    p:nth-child(1) {
+        color: var(--clr-brown-400);
+    }
+
+    p:nth-child(2) {
+        font-size: 2rem;
+        font-weight: var(--fw-bold);
+    }
+}
+
+.stats-two-container{
+    display: flex;
+    flex-direction: column;
+    align-items: self-end;
+    p:nth-child(1) {
+        font-weight: var(--fw-bold);
+    }
+
+    p:nth-child(2) {
+        color: var(--clr-brown-400);
+    }
 }

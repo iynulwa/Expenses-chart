@@ -1,13 +1,15 @@
+@use 'variable' as var;
+
 :root{
-    --clr-red-500: #{primary-red-colour};
-    --clr-blue-300: #{primary-blue-colour};
-    --clr-brown-950: #{primary-brown-colour};
-    --clr-brown-400: #{secondary-brown-colour};
-    --clr-red-100: #{secondary-red-colour};
-    --fs-body: #{font-body};
-    --fw-normal: #{font-weight-normal};
-    --fw-bold: #{font-weight-bold};
-    --ff-body: #{font-stack};
+    --clr-red-500: #{var.$primary-red-colour};
+    --clr-blue-300: #{var.$primary-blue-colour};
+    --clr-brown-950: #{var.$primary-brown-colour};
+    --clr-brown-400: #{var.$secondary-brown-colour};
+    --clr-red-100: #{var.$secondary-red-colour};
+    --fs-body: #{var.$font-body};
+    --fw-normal: #{var.$font-weight-normal};
+    --fw-bold: #{var.$font-weight-bold};
+    --ff-body: #{var.$font-stack};
 }
 
 * {
@@ -45,7 +47,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    background-color: var(--clr-red-100);
     min-height: 100vh;
     line-height: 1.5;
     font-family: var(--ff-body) system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -110,7 +112,11 @@ textarea:not([rows]) {
 // App.jsx style
 main {
     flex-direction: column;
+    justify-content: center;
     width: 100%;
+    height: 100vh;
     max-width: 40rem;
-    gap: 2rem;
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--clr-red-100);
 }

@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: var(--clr-red-500);
+    color: white;
+
+    div {
+        p:nth-child(2) {
+            font-size: 2rem;
+            font-weight: var(--fw-bold);
+        }
+    }
+}
