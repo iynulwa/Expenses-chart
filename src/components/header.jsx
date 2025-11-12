@@ -1,8 +1,8 @@
 function Header() {
     return(
-        <section className="flex">
+        <section className="flex header">
             <div>
-                <p>My Balance</p>
+                <p>My balance</p>
                 <p>$921.48</p>
             </div>
             <div className="flex">
