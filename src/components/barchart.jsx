@@ -1,5 +1,5 @@
 import { Bar }  from 'react-chartjs-2';
-import { Chart, BarController, BarElement, plugins } from 'chart.js/auto';
+import { Chart, BarController, BarElement, plugins, Tooltip, Title } from 'chart.js/auto';
 import sourceData from '../data/data.json';
 
 Chart.register(BarController, BarElement);
@@ -53,6 +53,26 @@ function Barchart () {
         plugins: {
             legend: {
                 display: false,
+            },
+            tooltip: {
+                backgroundColor: 'hsl(25, 47%, 15%)',
+                yAlign: 'bottom',
+                caretSize: 0,
+                caretPadding: 5,
+                padding: 8,
+                bodyFont: {
+                    size: 18,
+                    weight: 500,
+                },
+                displayColors: false,
+                callbacks: {
+                    title: function() {
+                        return '';
+                    },
+                    label: function(context) {
+                        return '$' + context.parsed.y.toFixed(2);
+                    }
+                }
             }
         }
     }
